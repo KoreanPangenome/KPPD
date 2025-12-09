@@ -13,7 +13,7 @@
 
 ## 1. Overview
 
-**Korean Precision Pangenome Draft (KPPD)** is a population-scale Korean pangenome reference constructed from **132 deep-sequenced Korean individuals**.  
+**A Draft Korean Pangenome Referenc (KPPD)** is a population-scale Korean pangenome reference constructed from **132 deep-sequenced Korean individuals**.  
 The dataset integrates telomere-to-telomere assemblies and high-quality long-read assemblies to enable accurate structural variant discovery, genome graph construction, and haplotype resolution.
 
 ### Composition of the Dataset
