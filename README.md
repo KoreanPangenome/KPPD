@@ -77,7 +77,7 @@ The following dataset files are available via Google Drive.
 
 If you use KPPD in your research, please cite:
 
-**Korean Precision Pangenome Draft (KPPD), National Institute of Health, Republic of Korea (2025).**  
+**(Not yet) Korean Precision Pangenome Draft (KPPD), National Institute of Health, Republic of Korea (2025).**  
 
 A preprint citation will be added after manuscript release.
 
