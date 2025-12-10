@@ -29,30 +29,93 @@ The dataset integrates telomere-to-telomere assemblies and high-quality long-rea
 
 ## 2. Analysis Workflow
 
-### 2.1 Long-Read Assembly
-- **ONT Ultra-long reads**: basecalling → adapter trimming → QC  
-- **PacBio HiFi reads**: CCS generation → filtering → QC  
-- Assemblers used: **hifiasm**, **hifiasm-t2t**, ONT-aware polishing  
-- Haplotypes generated using hifiasm phasing  
-- Manual curation performed for T2T samples
+The Korean Pangenome Draft (KPPD) was constructed through a multi-stage workflow integrating long-read assemblies, graph construction, and haplotype-aware read alignment. Below is the summary of the full analysis pipeline.
 
-### 2.2 Pangenome Graph Construction
-- Backbone reference: **T2T-CHM13 v2.0**  
-- Tools used:  
-  - **Minigraph-Cactus** for multi-assembly graph  
-  - **VG toolkit** for GBZ graph generation (`vg gbwt`, `vg index`, `vg giraffe`)
+---
 
-### 2.3 Variant Calling
-- SV calling from assemblies using:  
-  - **PAV2** / **SVP**  
-  - **WAVE** for assembly-aware SV merging  
-- SNP/INDEL processing coordinated to CHM13; GRCh38 versions also generated
+### 2.1 Sequencing Data Generation
 
-### 2.4 Output Files
-- Multi-assembly graph (GFA, GBZ)  
-- Population haplotype panel  
-- SV / SNP / INDEL variation sets  
-- QC metrics and MD5 checksums  
+A total of **132 genomes** were sequenced:
+
+- **128 PacBio Revio HiFi datasets**  
+  - ~30× depth, N50 ~16 kb, Q28 median
+- **4 T2T-level datasets**  
+  - PacBio Revio HiFi (~60×)  
+  - ONT Ultra-Long (~60×; N50 ~90 kb)  
+  - Dovetail Omni-C (40×, 151 bp)
+
+These datasets were used to generate high-quality haplotype-resolved assemblies.
+
+---
+
+### 2.2 Assembly Construction (Hifiasm)
+
+Assemblies were constructed using:
+
+**Hifiasm (v0.19.9–r616)**
+
+- **For 128 non-T2T samples:**  
+  - Hifiasm produced *partial phased contigs per sample* (Hap1 / Hap2)
+  - Total: 256 raw assemblies
+
+- **For 4 T2T samples:**  
+  - Hifiasm generated *fully phased T2T-level haplotype assemblies*
+  - Total: 8 raw assemblies
+
+Resulting assemblies included both partially phased and fully phased haplotype contigs depending on sequencing depth.
+
+---
+
+### 2.3 Assembly Correction
+
+Raw assemblies were polished and corrected through the following steps:
+
+- **Error correction using self-alignment of PacBio HiFi reads**  
+  Tool: **Inspector v1.3.1**
+- **Final output: 264 corrected assemblies**  
+  - HiFi-only genomes:  
+    - Mean: 561 contigs, QV ~53  
+  - T2T-level haplotypes:  
+    - Mean: 102 contigs, QV ~54
+
+Corrected haplotypes were used as input for graph construction.
+
+---
+
+### 2.4 Draft Korean Pangenome Graph Construction
+
+The **Draft Korean Pangenome Graph** was built using:
+
+- **Minigraph-cactus** for multi-assembly genome graph construction
+  - Input references:  
+    - CHM13 v2.0  
+    - GRCh38  
+    - 132 Korean haplotype assemblies  
+  - Output graph size:  
+    - **123 M nodes, 171 M edges, 3.45 GB (GBZ/GFA)**
+
+This graph represents the merged Korean haplotype diversity on the CHM13 backbone.
+
+---
+
+### 2.5 Haplotype-Aware Short-Read Alignment
+
+Short reads were aligned to the pangenome graph using:
+
+- **vg giraffe (v1.6.7)** for haplotype-aware mapping  
+- Alignment output: **GAM format**
+
+A haplotype depth filter was applied using:
+
+- **vg clip (1.6.7)**
+
+Filtering thresholds:
+
+- HPRC haplotypes with >9× depth (AF > 0.1)  
+- Korean pangenome haplotypes with >2× depth (AF > 0.01)  
+- Korean haplotypes with >53× depth (AF > 0.2)
+
+These filters refine haplotype representation for variant interpretation.
 
 ---
 
