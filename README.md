@@ -86,7 +86,7 @@ Corrected haplotypes were used as input for graph construction.
 
 The **Draft Korean Pangenome Graph** was built using:
 
-- **Minigraph-cactus** for multi-assembly genome graph construction
+- **Minigraph-cactus (v2.9.3) ** for multi-assembly genome graph construction
   - Input references:  
     - CHM13 v2.0  
     - GRCh38  
