@@ -128,7 +128,7 @@ The following dataset files are available via Google Drive.
 | **kor132.chm13v2.gfa.gz** | Multi-assembly pangenome graph (GFA) | [Download](https://drive.google.com/file/d/1aG5d70RsDNPzGBim7Tax-cDtG1dmAQdY/view?usp=drive_link) |
 | **kor132.chm13v2.gbz** | GBZ-format graph (VG-compatible) | [Download](https://drive.google.com/file/d/1y84nTxuCevpvNlsO8KyDGiV7RyzI2O59/view?usp=drive_link) |
 | **kor132.chm13v2.hapl** | Population haplotype panel | [Download](https://drive.google.com/file/d/1cwrrG7F0Xupi2S2UpN8KMNFDSzYPrH5z/view?usp=drive_link) |
-| **kor132.chm13v2.sv.gfa.fa.gz** | SV graph (GFA + FASTA) | [Download](https://drive.google.com/file/d/10JfxoOObxcJD2HqAdiXeuAJeI0GY9y06/view?usp=drive_link) |
+| **kor132.chm13v2.sv.gfa.fa.gz** | SV graph (GFA + FASTA) | [Download](https://drive.google.com/file/d/1OLH_PjftZO6KIXXAC4aqtc49Quk3agX5/view?usp=drive_link) |
 | **kor132.chm13v2.wave.vcf.gz** | SV calls (CHM13 coordinates) | [Download](https://drive.google.com/file/d/1IsVE6usKf58DJzXshVrk8-GlmYdUMxsU/view?usp=drive_link) |
 | **kor132.chm13v2.GRCh38.wave.vcf.gz** | SV calls lifted to GRCh38 | [Download](https://drive.google.com/file/d/1QBOxyrVRvJASzgJ-pDh0Z-1MY1wi-r5C/view?usp=drive_link) |
 | **upload_md5sum.txt** | MD5 checksum file | [Download](https://drive.google.com/file/d/1KhzOZ15xamKJ9ceK356ZBKf0_kMWaZuV/view?usp=drive_link) |
