@@ -129,6 +129,8 @@ The following dataset files are available via Google Drive.
 | **kor132.chm13v2.gbz** | GBZ-format graph (VG-compatible) | [Download](https://drive.google.com/file/d/1y84nTxuCevpvNlsO8KyDGiV7RyzI2O59/view?usp=drive_link) |
 | **kor132.chm13v2.hapl** | Population haplotype panel | [Download](https://drive.google.com/file/d/1cwrrG7F0Xupi2S2UpN8KMNFDSzYPrH5z/view?usp=drive_link) |
 | **kor132.chm13v2.sv.gfa.fa.gz** | SV graph (GFA + FASTA) | [Download](https://drive.google.com/file/d/1OLH_PjftZO6KIXXAC4aqtc49Quk3agX5/view?usp=drive_link) |
+| **kor132.chm13v2.wave.vcf.gz** | VCF INFO (CHM13 coorrdinates) | [Download](https://drive.google.com/file/d/1o2kNQdoMR2y5AvXgoS3yUNmVYVNMtMEO/view?usp=drive_link) |
+| **kor132.chm13v2.GRCh38.wave.vcf.gz** | VCF INFO (GRCh38 coorrdinates) | [Download](https://drive.google.com/file/d/1_FqGHXKGGB1fnmQt7sVndiSMXbHTAZz_/view?usp=drive_link) |
 | **upload_md5sum.txt** | MD5 checksum file | [Download](https://drive.google.com/file/d/1KhzOZ15xamKJ9ceK356ZBKf0_kMWaZuV/view?usp=drive_link) |
 
 ---
