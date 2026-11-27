@@ -176,6 +176,15 @@ The following dataset files are available via Google Drive.
 | **kor132.chm13v2.GRCh38.wave.vcf.gz** | Variant calls in GRCh38 coordinates | [Download](https://drive.google.com/file/d/1_FqGHXKGGB1fnmQt7sVndiSMXbHTAZz_/view?usp=drive_link) |
 | **upload_md5sum.txt** | MD5 checksum file | [Download](https://drive.google.com/file/d/1KhzOZ15xamKJ9ceK356ZBKf0_kMWaZuV/view?usp=drive_link) |
 
+
+### T2T-level Genome Assemblies
+
+Haplotype-resolved T2T-level genome assemblies from four Korean individuals (eight haplotypes in total) are publicly available as part of the Korean Pangenome Project (KPP).
+
+| Dataset | Description | Link |
+|---------|-------------|------|
+| **KPP T2T-level assemblies** | Haplotype-resolved genome assemblies from 4 individuals (8 haplotypes) | [Download](YOUR_GOOGLE_DRIVE_LINK) |
+
 ---
 
 ## 4. Mapping srWGS to the Pangenome Graph and Variant Calling
